@@ -1,0 +1,12 @@
+td {
+    border: 1px solid black;
+    height: 20px;
+}
+
+tr {
+    border: 1px solid black;
+}
+
+input {
+    width: 100px;
+}
