@@ -48,9 +48,9 @@ function Table({editCateg,
        </div>
     }
 
-    
-
-   const rows = arr.map(function(item){
+    let rows;
+   if(arr){
+   rows = arr.map(function(item){
 
     if(editingManId !== item.id){
 
@@ -111,6 +111,7 @@ function Table({editCateg,
     
      
     })
+  }
   
     return <div>
              <table>
