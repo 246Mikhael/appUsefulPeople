@@ -10,15 +10,20 @@ function Category({item,
     setEditCateg}){
    
 
-    return <li>
-        {item}
+    return <>
+    <li className="categ-li">
+       <span className="categ-list">{item}</span> 
+       <span className="categ-buttons">
         <EditCategoriesButton
-         toggleVisibleCategoriesPanel={toggleVisibleCategoriesPanel}
-         hideAddUsefulManButton={hideAddUsefulManButton}
+            toggleVisibleCategoriesPanel={toggleVisibleCategoriesPanel}
+            hideAddUsefulManButton={hideAddUsefulManButton}
             setEditCateg={setEditCateg}
             item={item}/>
         <RemoveCategotyButton removeCategory={removeCategory} item={item}/>
+        </span>
         </li>
+        
+        </>
 }
 
 export default Category;

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Table from "../tableComponent/Table";
 import Category from "./Category";
 
@@ -13,17 +13,13 @@ function Categories({people,
   editingManId,
   saveEditMan,
   addManInCategory,
-  sendHandler
+  sendHandler,
+  setEditCateg,
+  editCateg
 }){
-  
-
-const[editCateg, setEditCategory] = useState('');
-
-function setEditCateg(value){
-  setEditCategory(value);
-}
 
     let res;
+    let res1;
   
   if(visibleCategoryPanel){  //взависимости от флага показываем или список категорий
      res = Object.keys(people).map(function(key){  //таблицу с людьми конкретной категории 
@@ -36,7 +32,8 @@ function setEditCateg(value){
                        setEditCateg={setEditCateg}/>
      })
     } else{
-      res = <Table editCateg={editCateg}
+      res1 = <Table editCateg={editCateg}
+                    setEditCateg={setEditCateg}
                     people={people}
                     delMan={delMan}
                     setEditingManId={setEditingManId}
@@ -46,14 +43,15 @@ function setEditCateg(value){
                     hideAddUsefulManButton={hideAddUsefulManButton}
                     addManInCategory={addManInCategory}
                     sendHandler={sendHandler}
+                    
                     />
     }
 
      
 
  return <div>
- <h3>Список полезных людей</h3>
-   <ul>
+   {res1}
+   <ul className="categ-ul">
    {res}
  </ul>
  </div>

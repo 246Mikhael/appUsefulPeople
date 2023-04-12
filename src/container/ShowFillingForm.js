@@ -6,7 +6,7 @@ import FillingForm from '../components/inputNewManComponents/FillingForm';
 const mapStateToProps = (state) =>{
    return ({ 
       visibleInputs: state.addField.visibleInputs,
-      store: state.addField
+      store: state.addField,
    })
 }
 
@@ -14,7 +14,8 @@ const mapDispatchToProps = (dispatch) =>{
    return ({
    sendHandler: (dataOfMan) => dispatch(addData(dataOfMan)),
    hideInputs: ()=> dispatch({type: "ADD_FIELD"}),
-   showAddUsefulManButton: ()=> dispatch({type: 'CHANGE_VISIBILITY'}) 
+   showAddUsefulManButton: ()=> dispatch({type: 'CHANGE_VISIBILITY'}), 
+   hideAddUsefulManButton: ()=> dispatch({type: 'CHANGE_VISIBILITY'}),
    })
 };
 

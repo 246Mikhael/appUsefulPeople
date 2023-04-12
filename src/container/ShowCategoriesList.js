@@ -5,6 +5,7 @@ import { deleteMan } from "../actions/actions";
 import { setEditManId } from "../actions/actions";
 import { editMan }  from "../actions/actions";
 import { addData } from "../actions/actions";
+import { setEditCateg } from "../actions/actions";
 
 
 
@@ -12,7 +13,8 @@ const mapStateToProps = (state)=>{
     return ({
     people: state.addField.usefulPeople,
     visibleCategoryPanel:state.addField.visibleCategoryPanel,
-    editingManId: state.addField.manIdEditMode
+    editingManId: state.addField.manIdEditMode,
+    editCateg: state.addField.editCateg
     })
 }
 
@@ -24,7 +26,8 @@ const mapDispatchToProps = (dispatch)=>{
      delMan: (params) =>  dispatch(deleteMan(params)),
      setEditingManId:(id) => dispatch(setEditManId(id)),
      saveEditMan:(item) => dispatch(editMan(item)),
-     sendHandler: (dataOfMan) => dispatch(addData(dataOfMan))
+     sendHandler: (dataOfMan) => dispatch(addData(dataOfMan)),
+     setEditCateg: (item) => dispatch(setEditCateg(item))
    })
 }
 

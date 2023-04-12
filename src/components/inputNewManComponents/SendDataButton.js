@@ -2,7 +2,8 @@ import React from "react";
 
 
 function SendDataButton({sendHandler,hideInputs,showAddUsefulManButton,dataOfMan,checkObj,deleteValueOfObj}){
-    return <button onClick={()=>{
+    return <button className="panel-button" id="left-button"
+    onClick={()=>{
         if(checkObj(dataOfMan)){
         sendHandler(dataOfMan);
         hideInputs();
@@ -10,7 +11,7 @@ function SendDataButton({sendHandler,hideInputs,showAddUsefulManButton,dataOfMan
         deleteValueOfObj()
     }
          }}>
-            sendData
+            Добавить
             </button>
 }
 

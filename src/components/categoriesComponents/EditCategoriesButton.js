@@ -6,11 +6,13 @@ function EditCategoriesButton({toggleVisibleCategoriesPanel,
     setEditCateg
 }){
     
-    return <button onClick={()=>{toggleVisibleCategoriesPanel();
+    return <button className="left-categ-button"
+             onClick={()=>{toggleVisibleCategoriesPanel();
                                    hideAddUsefulManButton();
                                    setEditCateg(item)
+                                   console.log(item)
                                 }
-                                         }>Смотреть</button>
+                                         }>cмотреть</button>
 }
 
 export default EditCategoriesButton;

@@ -3,10 +3,10 @@ import React from "react";
 function AddUsefulManButton({showInputs,hideAddUsefulManButton}){
  
 
-return <button 
+return <button className="panel-button" id="right-button"
 onClick={()=>{showInputs();
   hideAddUsefulManButton()
-}}>Добавить человека</button>
+}}>добавить человека</button>
 }
 
 export default AddUsefulManButton;

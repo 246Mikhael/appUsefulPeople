@@ -2,7 +2,8 @@ import React from "react";
 
 
 function RemoveCategotyButton({removeCategory, item}){
-    return <button onClick={()=> removeCategory(item)}>Удалить</button>
+    return <button className="right-categ-button"
+     onClick={()=> removeCategory(item)}>удалить</button>
 }
 
 export default RemoveCategotyButton;

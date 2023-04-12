@@ -7,7 +7,8 @@ import { addCateg } from "../actions/actions";
 const mapStateToProps = (state)=>{
   return ({
     visible: state.addField.visibleAddUsefulManButton,
-     visibleInputCategory : state.addField.visibleCategoryInput
+     visibleInputCategory : state.addField.visibleCategoryInput,
+     visibleCategoryPanel:state.addField.visibleCategoryPanel,
   })
 };
 

@@ -7,9 +7,10 @@ function AddNewManInThisCategoryButton({
      setEditingManId,
      id
      }){
-    return <button onClick={()=>{
+    return <button className="panel-button" id="right-button"
+                        onClick={()=>{
                                 sendHandler(dataOfMan);
-                              setEditingManId(id)
+                                setEditingManId(id)
                             
                             }}>добавить человека</button>
 }

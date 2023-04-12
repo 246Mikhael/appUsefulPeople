@@ -25,3 +25,6 @@ export function editMan(item){
 export function addMan(params){
    return {type: 'ADD_MAN_IN_CATEGORY', params}
 }
+export function setEditCateg(item){
+   return {type:'EDIT_CATEG', item}
+}

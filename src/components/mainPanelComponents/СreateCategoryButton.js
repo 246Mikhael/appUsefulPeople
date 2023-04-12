@@ -6,7 +6,7 @@ function CreateCategoryButton({showInputCategory,
     changeState
 }){
     
-    return <button onClick={()=>{
+    return <button className="panel-button" id="left-button" onClick={()=>{
         if(!valueOfInput){
         showInputCategory()
      } else {

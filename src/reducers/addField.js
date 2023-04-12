@@ -5,6 +5,7 @@ const initialState = {
     visibleCategoryInput: false,
     visibleCategoryPanel: true,
     manIdEditMode: undefined,
+    editCateg: undefined,
     usefulPeople:{}
     
 }
@@ -100,10 +101,13 @@ export default function addField(state = initialState, action){
         usefulPeople = Object.assign({}, usefulPeople, {[action.item.category]:result1})
         return Object.assign({},state, {usefulPeople});
 
-
+        case 'EDIT_CATEG':
+            return Object.assign({}, state, {editCateg: action.item});
 
         
         default:
             return state;    
     }
+    
+    
 }
