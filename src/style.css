@@ -310,11 +310,10 @@ th {
         display: block;
     }
     .name-of-input-data{
-        width: 140px;
-        padding-left: 4px;
+        width: 120px;
+        padding-left: 3px;
         padding-top: 8px;
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 18px;
     } 
     .right-categ-button{
         margin-right: 0px;
@@ -326,10 +325,12 @@ th {
     .left-categ-button{
         width: 80px;
         margin-right: 4px;
+        font-size: 16px;
     }
     .right-categ-button{
         width: 70px;
         margin-left: 0px;
+        font-size: 16px;
     }
     .input-in-category{ 
         width: 100%
