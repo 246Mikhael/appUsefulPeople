@@ -27,26 +27,6 @@ function Table({editCateg,
   let res3;
   let res4;
 
-  /*  
-  let styleOfButton = {
-    visibility: 'hidden'
-  }
-    
-  
-    
-
-  function setStyleOfButton(func, obj) {
-    if ( !func(obj) ) {
-       return {
-          visibility: 'hidden'
-       }
-      }  else {
-        return {
-          visibility: 'visible'
-        }
-    }
-  }
-  */
 
   function checkInputs(obj){
       if((obj.phone ==="" && obj.networks === "") || 
@@ -56,17 +36,7 @@ function Table({editCateg,
         return false;
       }
   }
-/*
-  function checkInputs1(obj){
-      if((obj.phone !=="" && obj.networks !== "") || 
-         obj.surname !== "" ||  obj.profession !== ""){
-          return true
-      } else {
-          return false;
-      }
-  }
-*/
-  //------------------------------------
+ //-------------------------------------
   if(editingManId === undefined){
      
     let  initObj1 = {
@@ -211,40 +181,40 @@ function Table({editCateg,
       <div className="row justify-content-center mt-5">
 
         <div className="row justify-content-center mt-3"> 
-          <div className="col-5 col-sm-4 col-md-4 col-lg-4 name-of-input-data">Фамилия</div> 
+          <div className="col-5 col-sm-5 col-md-4 col-lg-4 name-of-input-data">Фамилия</div> 
           <EditParamOfManInput value={values.surname}
                              changeHandler={changeHandler}
                              objKey={'surname'}
                              placeholder={'заполнение обязательно'}/>
          </div> 
          <div className="row justify-content-center mt-3">                  
-             <div className="col-5 col-sm-4 col-md-4 col-lg-4 name-of-input-data">Имя</div>                       
+             <div className="col-5 col-sm-5 col-md-4 col-lg-4 name-of-input-data">Имя</div>                       
              <EditParamOfManInput value={values.name}
                              changeHandler={changeHandler}
                              objKey={'name'}/>
          </div>  
          <div className="row justify-content-center mt-3">                  
-             <div className="col-5 col-sm-4 col-md-4 col-lg-4 name-of-input-data">Профессия</div>                       
+             <div className="col-5 col-sm-5 col-md-4 col-lg-4 name-of-input-data">Профессия</div>                       
              <EditParamOfManInput value={values.profession} 
                              changeHandler={changeHandler}
                              objKey={'profession'}
                              placeholder={'заполнение обязательно'}/>
          </div> 
          <div className="row justify-content-center mt-3">                   
-             <div className="col-5 col-sm-4 col-md-4 col-lg-4 name-of-input-data">Виды работ</div>                       
+             <div className="col-5 col-sm-5 col-md-4 col-lg-4 name-of-input-data">Виды работ</div>                       
              <EditParamOfManInput value={values.job} 
                              changeHandler={changeHandler}
                              objKey={'job'}/>
          </div>  
          <div className="row justify-content-center mt-3">               
-             <div className="col-5 col-sm-4 col-md-4 col-lg-4 name-of-input-data">Телефон</div>                       
+             <div className="col-5 col-sm-5 col-md-4 col-lg-4 name-of-input-data">Телефон</div>                       
              <EditParamOfManInput value={values.phone} 
                              changeHandler={changeHandler}
                              objKey={'phone'}
                              placeholder={'заполните эту или соцсети'}/>
          </div> 
          <div className="row justify-content-center mt-3">                   
-             <div className="col-5 col-sm-4 col-md-4 col-lg-4 name-of-input-data">Соцсети</div>                        
+             <div className="col-5 col-sm-5 col-md-4 col-lg-4 name-of-input-data">Соцсети</div>                        
              <EditParamOfManInput value={values.networks}
                              changeHandler={changeHandler}
                              objKey={'networks'}

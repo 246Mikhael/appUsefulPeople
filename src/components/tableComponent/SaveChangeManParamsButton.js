@@ -7,26 +7,27 @@ function SaveChangeManParamsButton({setEditingManId, saveEditMan, item, id}){
     const target = useRef(null);
    
 
-    function checkInputs(obj){  //проверка на заполнение инпутов
-        if((obj.phone ==="" && obj.networks === "") || 
-         obj.surname === "" ||  obj.profession === ""){
-            setEditingManId(obj.id);
-           return;
-     } 
+    function checkInputs(obj) {  
+        if ((obj.phone ==="" && obj.networks === "") || 
+            obj.surname === "" ||  obj.profession === "") {
+               setEditingManId(obj.id);
+                return;
+          } 
      saveEditMan(item);
      setEditingManId(undefined);
  }
    
           return <div className="col-5 col-lg-4 col-md-6 col-sm-6">
               <button className="panel-button" 
-                   id={id}
-                   ref={target}
-                   onMouseOver={() => setShow(true)} 
-                   onMouseLeave={() => setShow(false)}
-                   onClick={()=>{
+                      id={id}
+                      ref={target}
+                      onMouseOver={() => setShow(true)} 
+                      onMouseLeave={() => setShow(false)}
+                      onClick={()=>{
                      if (checkInputs(item)) {
                          checkInputs(item); 
-                    }}}>
+                      }
+                    }}>
                    сохранить
                   </button>
                   <Overlay target={target.current} show={show} placement="bottom">

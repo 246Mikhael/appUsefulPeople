@@ -5,18 +5,18 @@ import InputNewCategory from "./InputNewCategory";
 import ShowCategoriesList from "../../container/ShowCategoriesList";
 
 
-function Buttons(
-    {showInputs,
+function Buttons({
+    showInputs,
     visible,
     hideAddUsefulManButton,
     showInputCategory,
     visibleInputCategory,
     visibleCategoryPanel,
-    addCategory}){
-
+    addCategory}) {
+ 
    
-    const[valueOfInput, setValueOfInput] = useState('');
-    function changeState(value){
+    const [valueOfInput, setValueOfInput] = useState('');
+    function changeState(value) {
         setValueOfInput(value);
     }
     

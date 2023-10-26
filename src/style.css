@@ -19,7 +19,7 @@
 #header {
     height: 100px;
     font-family: "ColorTube";
-    font-size: 35px;
+    font-size: 40px;
     border-bottom: 4px solid var(--grey);
     padding-top: 40px;
     padding-left: 60px;
@@ -221,6 +221,9 @@
    .input-name-wrap {
     height: 60px;
    }
+   #header {
+    font-size: 45px;
+   }
 }
 @media (min-width: 576px) and (max-width: 1000px) {
     .input-data-man {
@@ -230,8 +233,7 @@
 
 @media (max-width: 575px) {
     #root {
-        width: 90%;
-        margin-left: 5%;
+        width: 100%;
     }
 
     .panel-button {
@@ -243,6 +245,15 @@
     padding-top: 50px;
     text-align: center;
     padding-left: 0px;
+   }
+   .input-data-man {
+    font-size: 9px;
+    white-space: pre-wrap;
+   }
+   .name-of-input-data {
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: center;
    }
 }
 

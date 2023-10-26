@@ -36,18 +36,18 @@ function FillingForm({
 
   function changeHandler(prop, event){
    
-    setObj({...obj, ...{[prop]: event.target.value},id: id()})
+    setObj({
+      ...obj, 
+      ...{[prop]: event.target.value},
+      id: id()
+    })
   }
 
-  //const [isVisible, setVisiblity] = useState(false);
-
-
-
-  function checkObj(obj){  //проверка на заполнение инпутов
-         if((obj.phone ==="" && obj.networks === "") || 
-         obj.category === "" || obj.surname === "" || 
+  function checkObj(obj){ 
+         if ((obj.phone ==="" && obj.networks === "") || 
+              obj.category === "" || obj.surname === "" || 
               obj.profession === ""){
-            return false;
+              return false;
       } else {
         return obj;
       }
@@ -56,6 +56,7 @@ function FillingForm({
   function deleteValueOfObj(){
     setObj(initObj);
   }
+
   let showFillingForm;
 
   if(visibleInputs !== false){ 
@@ -78,8 +79,7 @@ function FillingForm({
                 hideInputs={hideInputs}
                 deleteValueOfObj={deleteValueOfObj}
                 id={'right-button'}/>
-  
-    </div>
+      </div>
     } else {
       buttonsPanel = <div className="row justify-content-center mt-5">
       <BackToMainButton hideAddUsefulManButton={hideAddUsefulManButton}
@@ -89,8 +89,6 @@ function FillingForm({
 
      </div>
     }
-
-    
     
     showFillingForm = <div className="container man-form">
     
@@ -104,7 +102,7 @@ function FillingForm({
        objKey={'category'}
        changeHandler={changeHandler}
        propsAddMan={propsAddMan}
-       placeholder={'заполнение обязательно'}/>
+       placeholder={'заполнение \n обязательно'}/>
    </div> 
    <div className="row justify-content-center mt-3 input-name-wrap">
      <div className="col-5 col-md-4 col-lg-4 col-sm-5 name-of-input-data input-name-wrap">Фамилия</div>

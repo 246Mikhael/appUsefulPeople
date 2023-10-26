@@ -13,14 +13,14 @@ function BackToMainButton({
 
     return <div className="col-6 col-sm-4 col-md-4 col-lg-4">
       <button className="panel-button" id={id}
-      ref={target}
-      onMouseOver={() => setShow(true)} 
-      onMouseLeave={() => setShow(false)}
-      onClick={()=>{
-        hideAddUsefulManButton();
-        hideInputs();
-        deleteValueOfObj()
-    }}>
+              ref={target}
+              onMouseOver={() => setShow(true)} 
+              onMouseLeave={() => setShow(false)}
+              onClick={()=> {
+                             hideAddUsefulManButton();
+                             hideInputs();
+                             deleteValueOfObj()
+       }}>
         назад
     </button>
      <Overlay target={target.current} show={show} placement="bottom">

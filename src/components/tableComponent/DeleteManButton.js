@@ -3,7 +3,7 @@ import { Overlay } from "react-bootstrap";
 import icon from "../../icons/delete1.png"
 
 
-function DeleteManButton({id, delMan, categ}){
+function DeleteManButton({id, delMan, categ}) {
 
   const [show, setShow] = useState(false);
   const target = useRef(null);

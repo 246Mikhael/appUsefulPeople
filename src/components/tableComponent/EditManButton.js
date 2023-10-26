@@ -11,10 +11,10 @@ function EditManButton({setEditingManId,id}){
 
     return  <div id="edit-man-wrap">
                <button id="edit-man-table-button"
-                  ref={target}
-                  onMouseOver={() => setShow(true)} 
-                  onMouseLeave={() => setShow(false)} 
-                  onClick={()=>{setEditingManId(id)}}>
+                       ref={target}
+                       onMouseOver={() => setShow(true)} 
+                       onMouseLeave={() => setShow(false)} 
+                       onClick={()=>{setEditingManId(id)}}>
                     <img className="delete-img-categ" src={icon} alt=""/>
               </button>
               <Overlay target={target.current} show={show} placement="right">

@@ -14,9 +14,10 @@ function BackToMainButton({
                 ref={target}
                 onMouseOver={() => setShow(true)} 
                 onMouseLeave={() => setShow(false)}
-                 onClick={()=>{toggleVisibleCategoriesPanel();
-                               hideAddUsefulManButton();
-                               setEditCateg(undefined)
+                 onClick={() => { 
+                                  toggleVisibleCategoriesPanel();
+                                  hideAddUsefulManButton();
+                                  setEditCateg(undefined)
                             }}>
                                 назад
                 </button>
