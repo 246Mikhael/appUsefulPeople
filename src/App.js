@@ -1,8 +1,9 @@
 import React from "react"
 import ShowFillingForm from "./container/ShowFillingForm";
-//import ShowCategoriesList from "./container/ShowCategoriesList";
 import ShowButtons from "./container/ShowButtons";
 import "./style.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from "./components/Header";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div>
+        <Header/>
         <ShowButtons/>
         <ShowFillingForm/>
     </div>

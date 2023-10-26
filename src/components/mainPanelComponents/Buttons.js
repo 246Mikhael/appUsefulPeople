@@ -14,42 +14,56 @@ function Buttons(
     visibleCategoryPanel,
     addCategory}){
 
-        const style ={
-            paddingTop: '8px'
-        }
    
     const[valueOfInput, setValueOfInput] = useState('');
     function changeState(value){
         setValueOfInput(value);
     }
-
-    console.log(visibleCategoryPanel)
+    
 
     let res;
         if(visible !== false){
-          res = <div style={style}>
-          <CreateCategoryButton 
-          showInputCategory={showInputCategory}
-          showInputs={showInputs}/>
-          <AddUsefulManButton
-          showInputs={showInputs}
-          hideAddUsefulManButton={hideAddUsefulManButton}
-          />
-          <ShowCategoriesList/>
-      </div>
+          res = <>
+            <div className="container">
+               <div className="row justify-content-center mt-5">
+                    <div className="col-6 col-lg-4 col-md-6 col-sm-6">
+                        <CreateCategoryButton 
+                            showInputCategory={showInputCategory}
+                            showInputs={showInputs}
+                            visible={visible}/>
+                    </div>
+                    <div className="col-6 col-lg-4 col-md-6 col-sm-6">
+                        <AddUsefulManButton
+                            showInputs={showInputs}
+                            hideAddUsefulManButton={hideAddUsefulManButton}/> 
+                    </div>
+                </div>
+            </div>
+            <ShowCategoriesList/>
+          </>
 } if(visibleInputCategory !== false){
-    res = <div style={style}>
-          <CreateCategoryButton 
-              valueOfInput={valueOfInput}
-              addCategory={addCategory} 
-              changeState={changeState}
-              showInputCategory={showInputCategory}      
-          />
-           <InputNewCategory 
-              changeState={changeState}
-              showInputCategory={showInputCategory}/>
-           <ShowCategoriesList/>   
-      </div>  
+    res = <>
+        <div className="container">
+            <div className="row justify-content-center mt-5 buttons-wrap"> 
+                <div className="col-6 col-lg-4 col-md-6 col-sm-6 button-main-panel">
+                    <CreateCategoryButton 
+                        valueOfInput={valueOfInput}
+                        addCategory={addCategory} 
+                        changeState={changeState}
+                        showInputCategory={showInputCategory}/>
+                </div>
+                <div className="col-6 col-lg-4 col-md-6 col-sm-6 button-main-panel">
+                    <InputNewCategory 
+                        addCategory={addCategory}
+                        changeState={changeState}
+                        showInputCategory={showInputCategory}
+                        valueOfInput={valueOfInput}/>
+                </div>       
+            </div>         
+      </div> 
+      <ShowCategoriesList/>   
+    </> 
+
 } if(!visibleCategoryPanel){
    res = <ShowCategoriesList/>
 }
