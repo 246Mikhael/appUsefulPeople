@@ -76,7 +76,7 @@ function FormToAddInCateg ({
                            changeHandler={addMan}
                            objKey={'networks'}
                            placeholder={'**'}
-                           tooltipText={'*заполните эту или телефон'}/>
+                           tooltipText={'**заполните эту или телефон'}/>
       </div>
            
    </div>
