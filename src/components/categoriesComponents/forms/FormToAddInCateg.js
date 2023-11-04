@@ -75,7 +75,7 @@ function FormToAddInCateg ({
            <EditParamOfManInput value={newManValues.networks}
                            changeHandler={addMan}
                            objKey={'networks'}
-                           placeholder={'*'}
+                           placeholder={'**'}
                            tooltipText={'*заполните эту или телефон'}/>
       </div>
            
