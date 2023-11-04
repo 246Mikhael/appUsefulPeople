@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Overlay } from "react-bootstrap";
+import icon from "../../../icons/save.png"
 
 function SaveChangeManParamsButton({setEditingManId, saveEditMan, item, id}){
 
@@ -10,27 +11,27 @@ function SaveChangeManParamsButton({setEditingManId, saveEditMan, item, id}){
     function checkInputs(obj) {  
         if ((obj.phone ==="" && obj.networks === "") || 
             obj.surname === "" ||  obj.profession === "") {
-               setEditingManId(obj.id);
-                return;
-          } 
-     saveEditMan(item);
-     setEditingManId(undefined);
+                return false;
+          } else {
+            return true;
+          }
  }
    
           return <div className="col-5 col-lg-4 col-md-6 col-sm-6">
-              <button className="panel-button" 
+              <button  className="save-button-categ" 
                       id={id}
                       ref={target}
                       onMouseOver={() => setShow(true)} 
                       onMouseLeave={() => setShow(false)}
                       onClick={()=>{
-                     if (checkInputs(item)) {
-                         checkInputs(item); 
-                      }
+                    if (checkInputs(item)) {
+                      saveEditMan(item);
+                      setEditingManId(undefined); 
+                      }  
                     }}>
-                   сохранить
+                    <img className="save-img-categ" src={icon} alt=""/>
                   </button>
-                  <Overlay target={target.current} show={show} placement="bottom">
+                  <Overlay target={target.current} show={show} placement="top">
                   {({hasDoneInitialMeasure, placement, arrowProps, show:_show, popper, ...props}) => (
                     <div className="tooltip" 
                          {...props}>

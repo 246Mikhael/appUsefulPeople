@@ -1,39 +1,39 @@
 import React, { useRef, useState } from "react";
 import { Overlay } from "react-bootstrap";
-import icon from "../../icons/delete2.png"
+import icon from "../../icons/edit1.png"
 
 
 
 
-function RemoveCategotyButton({ removeCategory, 
-                                item,
-                                setEditMode
-                              }) {
+function EditCategButton({ 
+                          setEditMode, 
+                          item
+                         }) {
 
     const [show, setShow] = useState(false);
     const target = useRef(null);
 
     return <> 
-           <button className="delete-button-categ"
+           <button className="edit-button-categ"
+           onClick={() => {
+                setEditMode(true);
+              }}
                    ref={target}
                    onMouseOver={() => setShow(true)} 
                    onMouseOut={() => setShow(false)} 
-                   onClickCapture={(e)=> { removeCategory(item.category)
-                                            setEditMode(false)
-                                           console.log(item)
-                                       e.nativeEvent.stopPropagation()}}>
-              <img className="delete-img-categ"
+                  >
+              <img className="edit-img-categ"
                    src={icon} alt=""></img>
            </button>
             <Overlay target={target.current} show={show} placement="top">
             {({hasDoneInitialMeasure, placement, arrowProps, show:_show, popper, ...props}) => (
               <div className="tooltip" 
                    {...props}>
-                <span id="tooltip-text">Удалить категорию</span>
+                <span id="tooltip-text">Редактировать категорию</span>
               </div>
             )}
           </Overlay>
        </>    
 }
 
-export default RemoveCategotyButton;
+export default EditCategButton;

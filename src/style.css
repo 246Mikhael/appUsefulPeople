@@ -15,7 +15,6 @@
 }
 
 
-
 #header {
     height: 100px;
     font-family: "ColorTube";
@@ -24,6 +23,10 @@
     padding-top: 40px;
     padding-left: 60px;
     box-sizing: content-box;
+}
+
+#body {
+    background-color: #f2f6ff;
 }
 
 #usefull {
@@ -37,13 +40,10 @@
 .input-name-wrap {
     height: 50px;
 }
-
-.tooltip {
-    border: 4px solid var(--green);
-    border-radius: 10px;
-    padding: 20px;
-    z-index: 999999;
-    background-color: white;
+.tooltip-input {
+    background-color: #e4e5e8;
+    display: block;
+    margin-right: 15px;
     
 }
 
@@ -54,10 +54,14 @@
 .man-card {
     display: flex;
     flex-direction: column;
-    border: 4px solid var(--blue);
+    background-color: #fffdff;
     border-radius: 10px;
     height: 200px;
     position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .panel-button {
@@ -86,9 +90,9 @@
 
 #new-category-input{
     width: 100%;
-    height: 50px;
-    border-radius: 0px 25px 25px 0px;
-    border: 4px solid var(--blue);
+    height: 45px;
+    border-radius: 6px;
+    border: 3px solid var(--blue);
     box-sizing: border-box;
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
@@ -105,33 +109,89 @@
 
 
 .categ-div {
-    border: 4px solid var(--blue);
+    border: 4px solid #e4e5e8;
+    background-color: #e4e5e8;
     border-radius: 10px;
-    height: 200px;
-    padding-top: 20%;
+    height: 320px;
     position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
+#category {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #e4e5e8;
+    width: 100%;
+    display: inline-block;
+}
 
 
 
 .delete-button-categ {
     border: 0px;
-    background-color: white;
-    bottom: 3px;
+    background-color: #e4e5e8;
+    top: 0;
     right: 0;
     border-radius: 10px;
     position: absolute;
+    z-index: 2;
+}
+
+.add-button-categ {
+    border: 0px;
+    background-color: #e4e5e8;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+}
+.edit-button-categ {
+    border: 0px;
+    background-color: #e4e5e8;
+    top: 0;
+    right: 0;
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+}
+.save-button-man {
+    border: 0px;
+    background-color: #e4e5e8;
+    top: 0;
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute; position: absolute;
+    right: 0;
+}
+.save-button-categ {
+    border: 0px;
+    background-color: #e4e5e8;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
 }
 
 .delete-img-categ {
     width: 40px;
 }
+.save-img-categ {
+    width: 40px;
+}
+.edit-img-categ {
+    width: 40px;
+}
+.add-img-categ {
+    width: 30px;
+}
 
 .input-data-man{
     height: 50px;
-    border-radius: 0px 25px 25px 0px;
-    border: 4px solid var(--green);
+    border: 3px solid var();
     box-sizing: border-box;
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif; 
@@ -143,14 +203,13 @@
 }
 .name-of-input-data{
     height: 50px;
-    border-radius:25px 0px 0px 25px;
-    border: 4px solid var(--blue);
     box-sizing: border-box;
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif; 
     display: inline-block;
     padding-left: 20px;
     padding-top: 2px;
+    background-color: #fffdff;
 }
 .man-form{
     margin-top: 15px;
@@ -197,6 +256,21 @@
     cursor: pointer;
 }
 
+.input-in-categ {
+    font-size: 16px;
+}
+
+.name-of-input-in-categ {
+    font-size: 19px;
+   }
+   .input-in-categ {
+    font-size: 18px;
+   }
+   .tooltip-input {
+    font-size: 20px;
+   }
+
+
 @media (min-width: 1400px) {
    #root {
     width: 70%;
@@ -209,14 +283,13 @@
     height: 60px;
     font-size: 26px;
    }
+   
    .name-of-input-data {
     height: 60px;
     padding-top: 7px;
-    border-radius: 30px 0px 0px 30px;
    }
    .input-data-man {
     height: 60px;
-    border-radius: 0px 30px 30px 0px;
    }
    .input-name-wrap {
     height: 60px;
@@ -224,14 +297,26 @@
    #header {
     font-size: 45px;
    }
+
+   
+   
 }
-@media (min-width: 576px) and (max-width: 1000px) {
+@media (min-width: 576px) and (max-width: 768px) {
     .input-data-man {
         font-size: 17px;
     }
+    .name-of-input-in-categ {
+        font-size: 17px;
+       }
+       .input-in-categ {
+        font-size: 17px;
+       }
+       .tooltip-input {
+        font-size: 17px;
+       }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     #root {
         width: 100%;
     }
@@ -247,13 +332,38 @@
     padding-left: 0px;
    }
    .input-data-man {
-    font-size: 9px;
+    font-size: 12px;
     white-space: pre-wrap;
    }
    .name-of-input-data {
     font-size: 18px;
     padding-top: 10px;
     text-align: center;
+   }
+   .categ-div {
+    width: 80%;
+    left: 10%;
+   }
+   .name-of-input-in-categ {
+    font-size: 16px;
+   }
+   .input-in-categ {
+    font-size: 16px;
+   }
+   .tooltip-input {
+    font-size: 14px;
+   }
+
+   @media (max-width: 375px) {
+    .name-of-input-in-categ {
+        font-size: 12px;
+       }
+       .input-in-categ {
+        font-size: 12px;
+       }
+       .tooltip-input {
+        font-size: 14px;
+       }
    }
 }
 

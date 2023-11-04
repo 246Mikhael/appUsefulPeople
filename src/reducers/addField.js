@@ -62,6 +62,7 @@ export default function addField(state = initialState, action){
        case 'REMOVE_CATEG':
               let usefulPeople = {};
               Object.assign(usefulPeople, state.usefulPeople);
+              console.log(action.item)
               delete usefulPeople[action.item];
               return Object.assign({}, state, {usefulPeople});
               

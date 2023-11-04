@@ -76,16 +76,16 @@ function FillingForm({
       buttonsPanel = <div className="row justify-content-center mt-5">
            <SendDataButton propsAddMan={propsAddMan}/>
            <BackToMainButton hideAddUsefulManButton={hideAddUsefulManButton}
-                hideInputs={hideInputs}
-                deleteValueOfObj={deleteValueOfObj}
-                id={'right-button'}/>
+                             hideInputs={hideInputs}
+                             deleteValueOfObj={deleteValueOfObj}
+                             id={'right-button'}/>
       </div>
     } else {
       buttonsPanel = <div className="row justify-content-center mt-5">
-      <BackToMainButton hideAddUsefulManButton={hideAddUsefulManButton}
-           hideInputs={hideInputs}
-           deleteValueOfObj={deleteValueOfObj}
-           id={'center-button'}/>
+      <          BackToMainButton hideAddUsefulManButton={hideAddUsefulManButton}
+                        hideInputs={hideInputs}
+                        deleteValueOfObj={deleteValueOfObj}
+                        id={'center-button'}/>
 
      </div>
     }
@@ -102,7 +102,7 @@ function FillingForm({
        objKey={'category'}
        changeHandler={changeHandler}
        propsAddMan={propsAddMan}
-       placeholder={'заполнение \n обязательно'}/>
+       placeholder={'обязательно'}/>
    </div> 
    <div className="row justify-content-center mt-3 input-name-wrap">
      <div className="col-5 col-md-4 col-lg-4 col-sm-5 name-of-input-data input-name-wrap">Фамилия</div>
@@ -111,7 +111,7 @@ function FillingForm({
        objKey={'surname'}
        changeHandler={changeHandler}
        propsAddMan={propsAddMan}
-       placeholder={'заполнение обязательно'}/>
+       placeholder={'обязательно'}/>
     </div>
     <div className="row justify-content-center mt-3 input-name-wrap">
       <div className="col-5 col-md-4 col-lg-4 col-sm-5 name-of-input-data">Имя</div>
@@ -122,16 +122,16 @@ function FillingForm({
          propsAddMan={propsAddMan}/>
    </div>
    <div className="row justify-content-center mt-3 input-name-wrap">
-     <div className="col-5 col-md-4 col-lg-4 col-sm-5 name-of-input-data">Профессия</div>
+     <div className="col-5 col-md-4 col-lg-4 col-sm-5 name-of-input-data">Сфера</div>
      <InputData 
        value={obj.profession} 
        objKey={'profession'}
        changeHandler={changeHandler}
-       placeholder={'заполнение обязательно'}
+       placeholder={'обязательно'}
        propsAddMan={propsAddMan}/>
    </div>
    <div className="row justify-content-center mt-3 input-name-wrap">
-     <div className="col-5 col-md-4 col-lg-4 col-sm-5 name-of-input-data">Виды работ</div> 
+     <div className="col-5 col-md-4 col-lg-4 col-sm-5 name-of-input-data">Скилл</div> 
      <InputData  
        value={obj.job}
        objKey={'job'}
@@ -144,7 +144,7 @@ function FillingForm({
        value={obj.phone} 
        objKey={'phone'}
        changeHandler={changeHandler}
-       placeholder={'заполните одно из полей'}
+       placeholder={'одно из полей'}
        propsAddMan={propsAddMan}/>
    </div>
    <div className="row justify-content-center mt-3 input-name-wrap">
@@ -153,7 +153,7 @@ function FillingForm({
         value={obj.networks}
         objKey={'networks'}
         changeHandler={changeHandler}
-        placeholder={'заполните одно из полей'}
+        placeholder={'одно из полей'}
         propsAddMan={propsAddMan}/>
     </div>
                           

@@ -27,7 +27,7 @@ function BackToMainButton({
      {({hasDoneInitialMeasure, placement, arrowProps, show:_show, popper, ...props}) => (
        <div className="tooltip" 
             {...props}>
-         <span id="tooltip-text">вернуться к категориям без сохранения</span>
+         <span id="tooltip-text"> без сохранения</span>
        </div>
      )}
    </Overlay>
