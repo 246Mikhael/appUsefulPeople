@@ -88,21 +88,6 @@
     border-radius: 25px 25px 25px 25px;
 }
 
-#new-category-input{
-    width: 100%;
-    height: 45px;
-    border-radius: 6px;
-    border: 3px solid var(--blue);
-    box-sizing: border-box;
-    font-size: 24px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-#new-category-input:focus{
-    outline: none;
-}
-
-
 .categ-list:hover {
     cursor: pointer;
 }
@@ -129,7 +114,7 @@
 
 
 
-.delete-button-categ {
+.delete-button-categ, .edit-button-categ  {
     border: 0px;
     background-color: #e4e5e8;
     top: 0;
@@ -139,7 +124,7 @@
     z-index: 2;
 }
 
-.add-button-categ {
+.add-button-categ, .save-button-categ {
     border: 0px;
     background-color: #e4e5e8;
     top: 0;
@@ -148,15 +133,7 @@
     z-index: 2;
     position: absolute;
 }
-.edit-button-categ {
-    border: 0px;
-    background-color: #e4e5e8;
-    top: 0;
-    right: 0;
-    border-radius: 10px;
-    z-index: 2;
-    position: absolute;
-}
+
 .save-button-man {
     border: 0px;
     background-color: #e4e5e8;
@@ -166,23 +143,9 @@
     position: absolute; position: absolute;
     right: 0;
 }
-.save-button-categ {
-    border: 0px;
-    background-color: #e4e5e8;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    position: absolute;
-    z-index: 2;
-}
 
-.delete-img-categ {
-    width: 40px;
-}
-.save-img-categ {
-    width: 40px;
-}
-.edit-img-categ {
+
+.delete-img-categ, .save-img-categ, .edit-img-categ {
     width: 40px;
 }
 .add-img-categ {
@@ -191,7 +154,6 @@
 
 .input-data-man{
     height: 50px;
-    border: 3px solid var();
     box-sizing: border-box;
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif; 
@@ -252,10 +214,6 @@
     font-family: "Comforta";
 }
 
-#category:hover {
-    cursor: pointer;
-}
-
 .input-in-categ {
     font-size: 16px;
 }
@@ -276,9 +234,7 @@
     width: 70%;
     margin: 0 auto;
    }
-   #new-category-input {
-    height: 60px;
-   }
+  
    .panel-button {
     height: 60px;
     font-size: 26px;
