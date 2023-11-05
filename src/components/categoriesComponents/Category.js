@@ -52,6 +52,15 @@ function Category({item,
       setNewManValues({...newManValues, ...{[prop]: value}})
      }
 
+     function checkInputs(obj) {  
+      if ((obj.phone ==="" && obj.networks === "") || 
+          obj.surname === "" ||  obj.profession === "") {
+              return false;
+        } else {
+          return true;
+        }
+     }
+
       
      let res;
      let res1;
@@ -68,11 +77,12 @@ function Category({item,
         res2 = <FormToChange 
                   item={item} 
                   setEditingManId={setEditingManId} 
-                  saveEditMan={saveEditMan}/>
+                  saveEditMan={saveEditMan}
+                  checkInputs={checkInputs}/>
 
         return <></>
      
-      } if (editingManId !== item.id && editMode) {
+      } if (editMode && !editingManId) {
 
         res1 = <>
            <RemoveCategotyButton 
@@ -101,7 +111,7 @@ function Category({item,
                 </div>  
       }
   
-      if (!editMode /*&& editingManId === undefined */&& !inputs) {
+      if (!editMode && !inputs) {
   
           res1 = <>
             <AddNewManInThisCategoryButton 
@@ -133,7 +143,8 @@ function Category({item,
                   sendHandler={sendHandler}
                   newManValues={newManValues}
                   addMan={addMan} 
-                  setNewManValues={setNewManValues}/>
+                  setNewManValues={setNewManValues}
+                  checkInputs={checkInputs}/>
 
          return  <></>
       } else {

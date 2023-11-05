@@ -7,23 +7,16 @@ import { nanoid } from "@reduxjs/toolkit";
 function SaveNewManInThisCategoryButton({
   newManValues,
   sendHandler,
-  showInputs, 
-  changeHandler,
-  setNewManValues
+  showInputs,
+  setNewManValues,
+  checkInputs
      }
      ){
 
         const [show, setShow] = useState(false);
         const target = useRef(null);
 
-        function checkInputs(obj) {  
-          if ((obj.phone ==="" && obj.networks === "") || 
-              obj.surname === "" ||  obj.profession === "") {
-                  return false;
-            } else {
-              return true;
-            }
-   }
+        
 
     return <>
          <button className="save-button-man"   

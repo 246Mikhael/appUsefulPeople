@@ -5,7 +5,12 @@ import SaveChangeManParamsButton from "./SaveChangeManParamsButton";
 
 
 
-function FormToChange ({ item, setEditingManId, saveEditMan }) {
+function FormToChange ({ 
+                   item, 
+                   setEditingManId, 
+                   saveEditMan,
+                   checkInputs 
+                  }) {
 
     let initObj = {
         id: item.id,
@@ -31,6 +36,10 @@ function FormToChange ({ item, setEditingManId, saveEditMan }) {
       <div className="col-4 name-of-input-in-categ">Фамилия</div> 
       <EditParamOfManInput value={values.surname}
                          changeHandler={changeHandler}
+                         setEditingManId={setEditingManId}
+                         saveEditMan={saveEditMan}
+                         item={values}
+                         checkInputs={checkInputs}
                          objKey={'surname'}
                          tooltipText={'заполнение обязательно'}
                          />
@@ -39,12 +48,20 @@ function FormToChange ({ item, setEditingManId, saveEditMan }) {
          <div className="col-4 name-of-input-in-categ">Имя</div>                       
          <EditParamOfManInput value={values.name}
                          changeHandler={changeHandler}
+                         setEditingManId={setEditingManId}
+                         saveEditMan={saveEditMan}
+                         item={values}
+                         checkInputs={checkInputs}
                          objKey={'name'}/>
      </div>  
      <div className="row justify-content-center mt-3">                  
          <div className="col-4 name-of-input-in-categ">Сфера</div>                       
          <EditParamOfManInput value={values.profession} 
                          changeHandler={changeHandler}
+                         setEditingManId={setEditingManId}
+                         saveEditMan={saveEditMan}
+                         item={values}
+                         checkInputs={checkInputs}
                          objKey={'profession'}
                          tooltipText={'заполнение обязательно'}/>
      </div> 
@@ -52,12 +69,20 @@ function FormToChange ({ item, setEditingManId, saveEditMan }) {
          <div className="col-4 name-of-input-in-categ">Скилл</div>                       
          <EditParamOfManInput value={values.job} 
                          changeHandler={changeHandler}
+                         setEditingManId={setEditingManId}
+                         saveEditMan={saveEditMan}
+                         item={values}
+                         checkInputs={checkInputs}
                          objKey={'job'}/>
      </div>  
      <div className="row justify-content-center mt-3">               
          <div className="col-4 name-of-input-in-categ">Телефон</div>                       
          <EditParamOfManInput value={values.phone} 
                          changeHandler={changeHandler}
+                         setEditingManId={setEditingManId}
+                         saveEditMan={saveEditMan}
+                         item={values}
+                         checkInputs={checkInputs}
                          objKey={'phone'}
                          tooltipText={'заполните эту или телефон'}/>
      </div> 
@@ -65,6 +90,10 @@ function FormToChange ({ item, setEditingManId, saveEditMan }) {
          <div className="col-4 name-of-input-in-categ">Соцсети</div>                        
          <EditParamOfManInput value={values.networks}
                          changeHandler={changeHandler}
+                         setEditingManId={setEditingManId}
+                         saveEditMan={saveEditMan}
+                         item={values}
+                         checkInputs={checkInputs}
                          objKey={'networks'}
                          tooltipText={'заполните эту или телефон'}/>
     </div>
@@ -72,6 +101,7 @@ function FormToChange ({ item, setEditingManId, saveEditMan }) {
               setEditingManId={setEditingManId}
               saveEditMan={saveEditMan}
               item={values}
+              checkInputs={checkInputs}
     /> 
    </div>
 }
